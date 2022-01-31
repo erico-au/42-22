@@ -1,0 +1,60 @@
+touch -t 202106012342 -m test1 test2 test3 test4 test5 test6
+chmod 421 | 421 | 421 - nome do arquivo
+ln -s test0 test6  -> link simbólico
+
+ex01 -------- chmod 455 
+tar -cf testShell00.tar testShell00
+
+ex02   ------ tar -cf exo2.tar *
+
+ex03  
+		ls --help
+------- ls 	-m  (listar arquivos e diretórios separados por virgula)
+			-u  (ordena por tempo de acesso)
+			-p  (realiza a listagem, mas diferencia diretórios de arquivos, colocando uma "/" na frente dos diretórios;)
+
+ls -mup
+
+ex04
+git log 
+		-n <number>
+			--max-count=<number>
+			Limit the number of commits to output.
+
+			--format=
+				-pretty[=<format>]
+				--format=<format>
+					Pretty-print the contents of the commit logs in a given format, where <format> can be one of oneline, short, medium, full, fuller, reference, email, raw, format:<string> and tformat:<string>. When <format> is none of the above, and has %placeholder in it, it acts as if --pretty=tformat:<format> were given.
+					See the "PRETTY FORMATS" section for some additional details for each format. When =<format> part is omitted, it defaults to medium.
+					Note: you can specify the default pretty format in the repository configuration (see git-config(1)).
+			"%H"
+				%H - commit hash
+
+ex5:
+git status --help
+
+				--ignored[=<mode>]
+					Show ignored files as well.
+					The mode parameter is used to specify the handling of ignored files. It is optional: it defaults to traditional.
+					The possible options are:
+						traditional - Shows ignored files and directories, unless --untracked-files=all is specified, in which case individual files in ignored directories are displayed.
+				-s
+				--short
+				  Give the output in the short-format.
+
+ex06
+Sintaxe:  diff [opções] [arquivo1] [arquivo2]
+
+		Opções:
+				-i :: ignora as diferenças de letras maiúsculas/minúsculas.
+				-E :: ignora as diferenças de tabulação.
+				-b :: ignora diferenças na quantidade de espaço em branco.
+				-w :: ignora qualquer espaço em branco.
+				-B :: ignora linhas em branco a mais ou a menos.
+				-a :: compara os arquivos como arquivos de texto, ainda que não sejam.
+				-u [n] :: mostra [n] linhas do conteúdo final do arquivo1, adicionadas as diferenças do arquivo2.
+				-q :: mostra apenas se o conteúdo dos arquivos são ou não diferentes.
+				-y :: mostra os arquivos em duas colunas, indicando as diferenças.
+				-t :: expande as tabulações, convertendo-as em espaços, na saída.
+				-r :: compara recursivamente todo o conteúdo de um diretório.
+				-S [arquivo] :: quando comparar diretórios, inicia a comparação pelo arquivo especificado.
