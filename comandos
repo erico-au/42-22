@@ -31,16 +31,8 @@ git log
 				%H - commit hash
 
 ex5:
-git status --help
 
-				--ignored[=<mode>]
-					Show ignored files as well.
-					The mode parameter is used to specify the handling of ignored files. It is optional: it defaults to traditional.
-					The possible options are:
-						traditional - Shows ignored files and directories, unless --untracked-files=all is specified, in which case individual files in ignored directories are displayed.
-				-s
-				--short
-				  Give the output in the short-format.
+git ls-files --others --ignored --exclude-standard
 
 ex06
 	patch a sw.diff -o b
@@ -62,3 +54,7 @@ ex06
 				-t :: expande as tabulações, convertendo-as em espaços, na saída.
 				-r :: compara recursivamente todo o conteúdo de um diretório.
 				-S [arquivo] :: quando comparar diretórios, inicia a comparação pelo arquivo especificado.
+
+				ex07
+
+				find -type f -name "*~" -print -delete -o -type f -name "#*#" -print -delete
