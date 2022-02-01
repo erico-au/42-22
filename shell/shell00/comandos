@@ -43,7 +43,11 @@ git status --help
 				  Give the output in the short-format.
 
 ex06
-Sintaxe:  diff [opções] [arquivo1] [arquivo2]
+	patch a sw.diff -o b
+			-o FILE  --output=FILE  Output patched files to FILE.
+
+
+	Sintaxe:  diff [opções] [arquivo1] [arquivo2]
 
 		Opções:
 				-i :: ignora as diferenças de letras maiúsculas/minúsculas.
