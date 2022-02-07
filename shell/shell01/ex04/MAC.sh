@@ -1,2 +1,2 @@
 #!/bin/sh
-ifconfig | grep "ether" -c 15-
+ifconfig | awk '/ether/' | sed 's/.*ether\s//'
