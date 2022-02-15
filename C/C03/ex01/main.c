@@ -5,24 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 22:44:51 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/10 22:48:40 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/15 16:12:48 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/15 16:22:24 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int	ft_str_is_uppercase(char *str);
+int	ft_strncmp(char *s1, char *s2, unsigned int n);
 
 int	main(void)
 {
-	char	*str;
-	int		return_function;
+	char	*s1;
+	char	*s2;
 
-	str = (char *)calloc(6, sizeof(char));
-	str = "AAAAA5";
-	return_function = ft_str_is_uppercase(str);
-	printf("return_function = %d\n", return_function);
+	s1 = malloc(10 * sizeof(char));
+	s2 = malloc(10 * sizeof(char));
+	s1 = "abcdefghi";
+	s2 = "abcdefGhi";
+	printf("s1: %s, s2: %s\n", s1, s2);
+	printf("n = 6; ft_cmp: %d, og_cmp: %d\n",
+		ft_strncmp(s1, s2, 6), strncmp(s1, s2, 6));
+	printf("n = 10; ft_cmp: %d, og_cmp: %d\n",
+		ft_strncmp(s1, s2, 10), strncmp(s1, s2, 10));
+	printf("n = 0; ft_cmp: %d, og_cmp: %d\n",
+		ft_strncmp(s1, s2, 0), strncmp(s1, s2, 0));
 	return (0);
 }
