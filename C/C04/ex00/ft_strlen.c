@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 23:28:43 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/16 01:23:21 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/16 00:04:33 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/16 00:05:23 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+int	ft_strlen(char *str)
 {
-	int	x;
-	int	y;
+	int	index;
 
-	x = 0;
-	if (to_find[x] == '\0')
-		return (str);
-	while (str[x] != '\0')
+	index = 0;
+	while (str[index] != '\0')
 	{
-		y = 0;
-		while (str[x + y] == to_find[y])
-		{
-			y++;
-			if (to_find[y] == '\0')
-				return (&str[x]);
-		}
-		x++;
+		index++;
 	}
-	return (str);
+	return (index);
 }

@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 23:28:43 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/16 01:23:21 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/16 00:09:11 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/16 00:11:53 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	int	x;
-	int	y;
+#include <stdio.h>
 
-	x = 0;
-	if (to_find[x] == '\0')
-		return (str);
-	while (str[x] != '\0')
-	{
-		y = 0;
-		while (str[x + y] == to_find[y])
-		{
-			y++;
-			if (to_find[y] == '\0')
-				return (&str[x]);
-		}
-		x++;
-	}
-	return (str);
+int	ft_strlen(char *str);
+
+int main(void)
+{
+	char str[] = "Erico Augusto";
+
+	printf("ret = %d\n", ft_strlen(str));
+	return (0);
 }

@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 23:28:43 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/16 01:23:21 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/16 00:46:59 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/16 13:27:35 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	int	x;
-	int	y;
+#include <unistd.h>
 
-	x = 0;
-	if (to_find[x] == '\0')
-		return (str);
-	while (str[x] != '\0')
+void	ft_putnbr(int nb)
+{
+	char			c;
+	unsigned int	div;
+	unsigned int	num;
+
+	if (nb < 0)
+		write(1, "-", 1);
+	if (nb < 0)
+		num = nb * (-1);
+	else
+		num = nb;
+	div = 1;
+	while (nb / 10)
 	{
-		y = 0;
-		while (str[x + y] == to_find[y])
-		{
-			y++;
-			if (to_find[y] == '\0')
-				return (&str[x]);
-		}
-		x++;
+		nb = nb / 10;
+		div *= 10;
 	}
-	return (str);
+	while (div)
+	{
+		c = '0' + num / div;
+		write(1, &c, 1);
+		num = num % div;
+		div = div / 10;
+	}
 }

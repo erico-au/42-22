@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 23:28:43 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/16 01:23:21 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/16 00:17:35 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/16 00:26:26 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
-{
-	int	x;
-	int	y;
+#include <unistd.h>
 
-	x = 0;
-	if (to_find[x] == '\0')
-		return (str);
-	while (str[x] != '\0')
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		y = 0;
-		while (str[x + y] == to_find[y])
-		{
-			y++;
-			if (to_find[y] == '\0')
-				return (&str[x]);
-		}
-		x++;
+		write (1, &str[i], 1);
+		i++;
 	}
-	return (str);
 }
