@@ -6,7 +6,18 @@
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:51:50 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/16 16:51:52 by eraugust         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:37:57 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
+int	ft_atoi(char *str);
+
+int	main()
+{
+	char str[] = " ---+--+1234ab567";
+
+	printf("ret = %d\n",ft_atoi(str));
+	return (0);
+}

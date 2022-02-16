@@ -6,7 +6,29 @@
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:51:47 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/16 16:51:48 by eraugust         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:47:12 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_atoi(char *str)
+{
+	int	x;
+	int	y;
+	int	z;
+
+	x = 0;
+	y = 0;
+	z = 0;
+	while ((str[x] >= 9 && str[x] <= 13) || str[x] == ' ')
+		x++;
+	while (str[x] == '-' || str[x] == '+')
+	{
+		if (str[x++] == '-')
+			z++;
+	}
+	while (str[x] >= '0' && str[x] <= '9')
+		y = y * 10 + (str[x++] - '0');
+	if (z % 2 == 1)
+		return (y * -1);
+	return (y);
+}
