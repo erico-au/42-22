@@ -6,7 +6,7 @@
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:51:47 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/16 21:16:16 by eraugust         ###   ########.fr       */
+/*   Updated: 2022/02/16 21:24:44 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,3 @@ int	ft_atoi(char *str)
 		return (y * -1);
 	return (y);
 }
-
-// test commit
