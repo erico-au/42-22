@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 20:29:42 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/17 20:31:30 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/18 21:22:21 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/18 22:16:00 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	main(int argc, char **argv)
+int	ft_sqrt(int nb)
 {
-	int		i;
-	char	*file;
+	int	x;
 
-	
+	x = 0;
+	if (nb >= x)
+	{
+		if (nb == 1)
+			return (nb);
+		while (x < nb)
+		{
+			if (x * x == nb)
+				return (x);
+			else if (x * x > nb)
+				return (0);
+			x++;
+		}
+	}
 	return (0);
 }

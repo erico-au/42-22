@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 20:29:42 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/17 20:31:30 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/18 17:13:14 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/18 22:57:52 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
 
-int	main(int argc, char **argv)
-{
-	int		i;
-	char	*file;
+int	ft_fibonacci(int index);
 
-	
+int	main(void)
+{
+	printf("fib = %d\n", ft_fibonacci(9));
 	return (0);
 }

@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 20:29:42 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/17 20:31:30 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/18 11:10:38 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/18 22:55:04 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	main(int argc, char **argv)
+int	ft_recursive_power(int nb, int power)
 {
-	int		i;
-	char	*file;
-
-	
-	return (0);
+	if (power < 0)
+		return (0);
+	if (power > 0)
+		return (nb * ft_recursive_power(nb, power - 1));
+	return (1);
 }

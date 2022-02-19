@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 20:29:42 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/17 20:31:30 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/18 01:58:21 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/18 02:27:40 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	main(int argc, char **argv)
+int	ft_iterative_power(int nb, int power)
 {
-	int		i;
-	char	*file;
+	int	x;
 
-	
-	return (0);
+	x = 1;
+	if (power < 0)
+		return (0);
+	while (power > 0)
+	{
+		x *= nb;
+		power--;
+	}
+	return (x);
 }

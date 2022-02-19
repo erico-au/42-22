@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 20:29:42 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/17 20:31:30 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/18 22:32:42 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/18 22:33:02 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	main(int argc, char **argv)
+int	ft_find_next_prime(int nb)
 {
-	int		i;
-	char	*file;
+	int	x;
 
-	
-	return (0);
+	x = 2;
+	if (nb <= 1)
+		return (0);
+	while (x <= (nb / 2))
+	{
+		if (nb % x == 0)
+			return (ft_find_next_prime(nb +1));
+		x++;
+	}
+	return (nb);
 }

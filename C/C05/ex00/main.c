@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eraugust <eraugust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 20:29:42 by eraugust          #+#    #+#             */
-/*   Updated: 2022/02/17 20:31:30 by eraugust         ###   ########.fr       */
+/*   Created: 2022/02/17 20:54:24 by eraugust          #+#    #+#             */
+/*   Updated: 2022/02/17 21:52:11 by eraugust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
 
-int	main(int argc, char **argv)
-{
-	int		i;
-	char	*file;
+int	ft_iterative_factorial(int nb);
 
-	
-	return (0);
+int	main(void)
+{
+	int	nb;
+
+	nb = 3;
+	printf("%d! = %d\n", nb, ft_iterative_factorial(nb));
+	return(0);
 }
